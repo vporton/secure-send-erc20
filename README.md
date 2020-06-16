@@ -3,7 +3,7 @@
 This is a proof of concept, not a ready product.
 
 ERC-20 tokens could be sent without exposing the sender using modified
-Anonymous Zether.
+Anonymous Zether: https://github.com/vporton/anonymous-zether
 
 The modification required is to add an additional `address recipient`
 parameter to the function `burn()` in

@@ -8,7 +8,6 @@
 // import getWeb3 from "./getWeb3";
 
 // getWeb3.then(({web3}) => {
-//     alert(web3.eth)
     web3.eth.getAccounts((x,account) => {
         // const option = "<option>"+account[1]+"</option>";
         // $("#primaryAccount").append(option);
