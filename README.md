@@ -19,11 +19,17 @@ browser) and maximal convenience of usage.
 
 ## Usage
 
-* Enter the contract address and the secret account.
+* (Once) Change the current Web3 account to the secret account. Enter the contract address and
+  press the button "Make secret account" (currently missing in the interface).
+  This button will store the secret account in browser local storage, register it,
+  retrieve its public key and also store in in browser local storage.
+
+* Switch to the primary account.
 
 * Start the transfer by entering the recipient and amount and clicking
   "Start transfer" (this should transfer to the secret account in the modified Zether
-  and store the transfer info in browser local storage).
+  and store the transfer info in browser local storage, it uses the secret account
+  and its public key from the browser local storage).
 
 * Optionally repeat.
 
@@ -31,7 +37,7 @@ browser) and maximal convenience of usage.
   the UI to the second stage of the transfer.
   The second stage shows a table with started transfers (from the browser local storage).
   Each transfer has "Finish" button that withdraws to the final recipient and removes
-  the trasnsfer from local storage.
+  the transfer from local storage.
   (We could also add the button "Finish all" and optionally batch transfers in the contract
   to make this operation atomic. However, there is no known reason to require its
   atomicity.)
@@ -41,6 +47,9 @@ browser) and maximal convenience of usage.
 If the browser local storage is lost or damaged, it is necessary to move money manually.
 Need a special interface to transfer from the modified Zether to an Ethereum account to
 recover the lost in the interim of an operation money.
+
+It is easy to lose the contract address. It can be restored, but it's cumbersome.
+See TODO.
 
 ## TODO
 
