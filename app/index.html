@@ -1,19 +1,56 @@
 <html>
     <head>
         <title>Transfer ERC-20 with Anonymous Sender</title>
-        <script src="index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="js/index.js" type="module"></script>
+        <style>
+            .bordered { border-collapse: collapse; }
+            .bordered td, .bordered th { border: 1px solid gray }
+        </style>
     </head>
     <body>
         <h1>Transfer ERC-20 with Anonymous Sender</h1>
         <table>
             <tr>
-                <th style="text-align: left;">Primary account:</th>
-                <td><select id="primaryAccount"></select></td>
+                <th style="text-align: left;">Anonymous Zether contract address:</th>
+                <td><input id="contract"/> <input type="button" value="Remember it"/></td>
             </tr>
             <tr>
                 <th style="text-align: left;">Secret account:</th>
-                <td><select id="secretAccount"></select></td>
+                <td><input id="secretAccount"/> <input type="button" value="Remember it"/></td>
             </tr>
         </table>
+
+        <div id="startPayment" style="display: none;">
+            <h2>Start payment</h2>
+            <table>
+                <tr>
+                    <th style="text-align: left;">Final destination:</th>
+                    <th><input id="destination"/></th>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">ERC-20 token:</th>
+                    <th><input id="token"/></th>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">Amount:</th>
+                    <th><input id="amount"/></th>
+                </tr>
+            </table>
+            <p><input type="button" value="Start payment"/></p>
+
+            <p>To finish started payments switch to the secret Ethereum account.</p>
+        </div>
+
+        <div id="finishPayments" style="display: none;">
+            <h2>Finish payments</h2>
+            <table class="bordered">
+                <tr>
+                    <th>Amount</th>
+                    <th>Destination</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
