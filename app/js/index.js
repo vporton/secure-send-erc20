@@ -28,9 +28,16 @@ function showHideTabs() {
     });
 }
 
+function startPayment() {
+    
+}
+
 window.ethereum.on('accountsChanged', showHideTabs);
 
 $(function() {
+    $('#contract').val(localStorage.secureSendERC20_contractAddress);
+    $('#secretAccount').val(localStorage.secureSendERC20_secretAccount);
+
     $('#secretAccount').change(showHideTabs);
     showHideTabs();
 });

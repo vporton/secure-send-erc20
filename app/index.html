@@ -14,11 +14,17 @@
         <table>
             <tr>
                 <th style="text-align: left;">Anonymous Zether contract address:</th>
-                <td><input id="contract"/> <input type="button" value="Remember it"/></td>
+                <td>
+                    <input id="contract"/>
+                    <input type="button" value="Remember it" onclick="localStorage.secureSendERC20_contractAddress = $('#contract').val()"/>
+                </td>
             </tr>
             <tr>
                 <th style="text-align: left;">Secret account:</th>
-                <td><input id="secretAccount"/> <input type="button" value="Remember it"/></td>
+                <td>
+                    <input id="secretAccount"/>
+                    <input type="button" value="Remember it" onclick="localStorage.secureSendERC20_secretAccount = $('#secretAccount').val()"/>
+                </td>
             </tr>
         </table>
 
@@ -34,7 +40,7 @@
                     <th><input id="amount"/></th>
                 </tr>
             </table>
-            <p><input type="button" value="Start payment"/></p>
+            <p><input type="button" value="Start payment" onclick="startPayment()"/></p>
 
             <p>To finish started payments switch to the secret Ethereum account.</p>
         </div>
