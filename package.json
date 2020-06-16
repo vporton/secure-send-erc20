@@ -6,7 +6,9 @@
   "repository": "git@github.com:vporton/secure-send-erc20.git",
   "author": "Victor Porton <porton@narod.ru>",
   "license": "GPL-3.0-or-later",
-  "dependencies": {},
+  "dependencies": {
+    "@anonymous-zether/anonymous.js": "./anonymous-zether/packages/anonymous.js"
+  },
   "devDependencies": {
     "@nomiclabs/buidler": "^1.3.6"
   }
