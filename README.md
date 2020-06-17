@@ -19,7 +19,8 @@ browser) and maximal convenience of usage.
 
 ## Usage
 
-* (Once) Change the current Web3 account to the secret account. Enter the contract address and
+* (Once) Change the current Web3 account to the secret account. (This updates the UI
+  automatically, try it.) Enter the contract address and
   press the button "Make secret account" (currently missing in the interface).
   This button will store the secret account in browser local storage, register it,
   retrieve its public key and also store in in browser local storage.
