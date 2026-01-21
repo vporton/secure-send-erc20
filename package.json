@@ -10,8 +10,8 @@
     "@anonymous-zether/anonymous.js": "./anonymous-zether/packages/anonymous.js",
     "@nomiclabs/buidler-ethers": "^1.3.3",
     "@nomiclabs/buidler-waffle": "^1.3.4",
-    "ethereum-waffle": "^2.3.0",
-    "ethers": "^4.0.27"
+    "ethereum-waffle": "^4.0.0",
+    "ethers": "^5.0.0"
   },
   "devDependencies": {
     "@nomiclabs/buidler": "^1.3.6"
